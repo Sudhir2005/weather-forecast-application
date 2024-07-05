@@ -1,20 +1,21 @@
-
+// src/services/weatherService.js
 export const fetchWeatherData = async (city) => {
     try {
-      const apiKey = 'd16cca4b256c43cfb2f55857240507'; 
-      const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
+      const apiKey = 'LdAXTYRN5cvZpIlh0yneDFYRxatYCGUp'; // Replace with your actual API key
+      const response = await fetch(`https://api.tomorrow.io/v4/timelines?location=${city}&fields=temperature&fields=weatherCode&timesteps=current&units=metric&apikey=${apiKey}`);
   
       if (!response.ok) {
         throw new Error('City not found');
       }
   
       const data = await response.json();
-      console.log('API response data:', data);
+      console.log('API response data:', data); // Debugging line
   
+      const weather = data.data.timelines[0].intervals[0].values;
       return {
-        city: data.location.name,
-        temperature: data.current.temp_c,
-        condition: data.current.condition.text,
+        city: city,
+        temperature: weather.temperature,
+        condition: weather.weatherCode,
       };
     } catch (error) {
       console.error("Error fetching weather data:", error);
