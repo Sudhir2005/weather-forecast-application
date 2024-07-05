@@ -6,7 +6,6 @@ const WeatherCard = ({ data }) => {
     <div className="weather-card">
       <h2>{data.city}</h2>
       <p>{data.temperature} °C</p>
-      <p>{data.condition}</p>
     </div>
   );
 };
