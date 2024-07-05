@@ -9,6 +9,7 @@ const WeatherDetails = () => {
 
   const handleSearch = async () => {
     const data = await fetchWeatherData(city);
+    console.log('Fetched weather data:', data); 
     setWeatherData(data);
   };
 

@@ -1,7 +1,6 @@
-
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #89f7fe 0%, #000000 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, white 0%, #89f7fe 0%, #000000 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,4 +10,8 @@ body {
 
 .App {
   text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
