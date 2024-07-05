@@ -1,7 +1,6 @@
-// src/services/weatherService.js
 export const fetchWeatherData = async (city) => {
     try {
-      const apiKey = 'LdAXTYRN5cvZpIlh0yneDFYRxatYCGUp'; // Replace with your actual API key
+      const apiKey = 'LdAXTYRN5cvZpIlh0yneDFYRxatYCGUp'; 
       const response = await fetch(`https://api.tomorrow.io/v4/timelines?location=${city}&fields=temperature&fields=weatherCode&timesteps=current&units=metric&apikey=${apiKey}`);
   
       if (!response.ok) {
@@ -9,7 +8,7 @@ export const fetchWeatherData = async (city) => {
       }
   
       const data = await response.json();
-      console.log('API response data:', data); // Debugging line
+      console.log('API response data:', data); 
   
       const weather = data.data.timelines[0].intervals[0].values;
       return {
@@ -22,7 +21,6 @@ export const fetchWeatherData = async (city) => {
       return {
         city: 'Unknown',
         temperature: 'N/A',
-        condition: 'N/A',
       };
     }
   };
