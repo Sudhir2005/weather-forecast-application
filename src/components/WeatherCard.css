@@ -1,0 +1,23 @@
+/* src/components/WeatherCard.css */
+.weather-card {
+    background: rgb(255, 112, 112);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .weather-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .weather-card h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .weather-card p {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  
